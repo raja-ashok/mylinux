@@ -11,6 +11,7 @@ alias k='kubectl'
 # 2.1 k3s related aliases
 alias k3sconf='sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config &&
                sudo chmod 755 ~/.kube/config &&
-               sudo chown $USER:$USER ~/.kube/config'
+               sudo chown $USER:$USER ~/.kube/config &&
+               sudo chmod 655 /etc/rancher/k3s/k3s.yaml'
 alias k3schmod='sudo chmod 755 /var/lib/rancher/k3s/server &&
                 sudo chmod 755 /var/lib/rancher/k3s/agent'
