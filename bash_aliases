@@ -15,3 +15,8 @@ alias k3sconf='sudo cp /etc/rancher/k3s/k3s.yaml ~/.kube/config &&
                sudo chmod 655 /etc/rancher/k3s/k3s.yaml'
 alias k3schmod='sudo chmod 755 /var/lib/rancher/k3s/server &&
                 sudo chmod 755 /var/lib/rancher/k3s/agent'
+
+# 3. Work
+## 3.1 Path update
+alias ldpath='echo $LD_LIBRARY_PATH'
+alias ldpathupdate='export LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH'
