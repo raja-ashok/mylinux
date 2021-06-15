@@ -2,6 +2,7 @@
 source ~/.bash_additional
 
 # 1. General aliases
+alias bashrc='. ~/.bashrc'
 alias ll='ls -l'
 alias llrt='ls -lrt'
 alias llrta='ls -lrta'
