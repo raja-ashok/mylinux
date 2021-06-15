@@ -1,1 +1,38 @@
 # Additional exports and functions
+
+export REPODIR="/home/rashok/repo"
+
+alias repodir='echo $REPODIR'
+
+# change directory
+# notes, mybashrc, workdata, vimide
+
+notes() {
+  cd $REPODIR/my/Notes
+}
+
+mybashrc() {
+  cd $REPODIR/my/mybashrc
+}
+
+workdata() {
+  cd $REPODIR/my/WorkData
+}
+
+vimide() {
+  cd $REPODIR/my/VimIDE
+}
+
+# ifl, iflfortls, twt
+
+ifl() {
+  cd $REPODIR/code/IFL
+}
+
+iflfortls() {
+  cd $REPODIR/code/IFLForTLS
+}
+
+twt() {
+  cd $REPODIR/code/TalkWithTLS
+}
