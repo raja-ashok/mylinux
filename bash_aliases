@@ -1,3 +1,6 @@
+# Additional exports and functions
+source ~/.bash_additional
+
 # 1. General aliases
 alias ll='ls -l'
 alias llrt='ls -lrt'
@@ -20,3 +23,6 @@ alias k3schmod='sudo chmod 755 /var/lib/rancher/k3s/server &&
 ## 3.1 Path update
 alias ldpath='echo $LD_LIBRARY_PATH'
 alias ldpathupdate='export LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH'
+
+# Additional exports, functions and aliases
+source ~/.bash_additional_work
