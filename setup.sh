@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cat ./bashrc >> ~/.bashrc
-cp ./bash_aliases ~/.bash_aliases
-cp ./bash_additional ~/.bash_additional
-cp ./bash_additional_work ~/.bash_additional_work
+cp ./bashrc-extra ~/.bashrc-extra
+cp ./bashrc-aliases ~/.bashrc-aliases
+cp ./bashrc-additional ~/.bashrc-additional
+cp ./bashrc-additional-work ~/.bashrc-additional-work

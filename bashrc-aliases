@@ -1,5 +1,5 @@
 # Additional exports and functions
-source ~/.bash_additional
+source ~/.bashrc-additional
 
 # 1. General aliases
 alias bashrc='. ~/.bashrc'
@@ -26,4 +26,4 @@ alias ldpath='echo $LD_LIBRARY_PATH'
 alias ldpathupdate='export LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH'
 
 # Additional exports, functions and aliases
-source ~/.bash_additional_work
+source ~/.bashrc-additional-work
