@@ -2,6 +2,7 @@
 
 apt install make gcc g++
 apt install net-tools
+apt install cloc
 
 # Install python2.7
 apt install python
