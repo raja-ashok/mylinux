@@ -11,8 +11,8 @@ notes() {
   cd $REPODIR/my/Notes
 }
 
-mybashrc() {
-  cd $REPODIR/my/mybashrc
+mylinux() {
+  cd $REPODIR/my/mylinux
 }
 
 workdata() {
