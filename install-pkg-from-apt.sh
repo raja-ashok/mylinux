@@ -15,3 +15,5 @@ apt install python3 python3-pip
 # Tools
 apt install gnome-tweak-tool
 
+# Doc
+apt install meld
