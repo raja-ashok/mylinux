@@ -1,4 +1,5 @@
 #!/bin/bash
 
 ./bashrc/setup.sh
-install-pkg-from-apt.sh
+sudo install-pkg-from-apt.sh
+./general-setup.sh

@@ -25,5 +25,16 @@ alias k3schmod='sudo chmod 755 /var/lib/rancher/k3s/server &&
 alias ldpath='echo $LD_LIBRARY_PATH'
 alias ldpathupdate='export LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH'
 
+## 3.2 git
+alias g='git'
+alias gru='git remote update'
+gl() {
+  GLARGS=""
+  if [ $# -gt 0 ]; then
+    GLARGS="-n $1"
+  fi
+  git log $GLARGS
+}
+
 # Additional exports, functions and aliases
 source ~/.bashrc-additional-work
