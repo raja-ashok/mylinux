@@ -52,6 +52,7 @@ gr() {
   echo "Rebasing to origin/${CUR_BRANCH}..."
   git rebase origin/${CUR_BRANCH}
 }
+alias gs='git status'
 alias ga='git add'
 alias gd='git diff'
 alias gc='git commit -m'
