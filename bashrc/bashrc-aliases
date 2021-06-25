@@ -12,6 +12,8 @@ alias ll='ls -l'
 alias llrt='ls -lrt'
 alias llrta='ls -lrta'
 
+alias c='clear'
+
 alias s='sudo systemctl'
 
 # 2. Kubernetes related aliases
