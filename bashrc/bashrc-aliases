@@ -54,7 +54,8 @@ gr() {
 }
 alias ga='git add'
 alias gd='git diff'
-alias gc='git commit'
+alias gc='git commit -m'
+alias gca='git commit --amend'
 gp() {
   CUR_BRANCH=$(parse_git_branch2)
   echo "Pushing origin ${CUR_BRANCH}..."
