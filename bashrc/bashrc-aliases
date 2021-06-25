@@ -35,6 +35,9 @@ gl() {
   fi
   git log $GLARGS
 }
+alias gc='git checkout'
+
+alias gssh='ssh-add ~/.ssh/id_rsa'
 
 # Additional exports, functions and aliases
 source ~/.bashrc-additional-work
