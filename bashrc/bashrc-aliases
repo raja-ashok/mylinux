@@ -3,6 +3,11 @@ source ~/.bashrc-additional
 
 # 1. General aliases
 alias bashrc='. ~/.bashrc'
+alias bashrc-extra='vi ~/.bashrc-extra'
+alias bashrc-aliases='vi ~/.bashrc-aliases'
+alias bashrc-additional='vi ~/.bashrc-additional'
+alias bashrc-additional-work='vi ~/.bashrc-additional-work'
+
 alias ll='ls -l'
 alias llrt='ls -lrt'
 alias llrta='ls -lrta'
@@ -27,7 +32,7 @@ alias ldpathupdate='export LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH'
 
 ## 3.2 git
 alias g='git'
-alias gru='git remote update'
+alias grupdate='git remote update'
 gl() {
   GLARGS=""
   if [ $# -gt 0 ]; then
@@ -36,6 +41,23 @@ gl() {
   git log $GLARGS
 }
 alias gc='git checkout'
+parse_git_branch2() {
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+}
+gr() {
+  CUR_BRANCH=$(parse_git_branch2)
+  git remote update
+  echo "Rebasing to origin/${CUR_BRANCH}..."
+  git rebase origin/${CUR_BRANCH}
+}
+alias ga='git add'
+alias gd='git diff'
+alias gc='git commit'
+gp() {
+  CUR_BRANCH=$(parse_git_branch2)
+  echo "Pushing origin ${CUR_BRANCH}..."
+  git push origin ${CUR_BRANCH}
+}
 
 alias gssh='ssh-add ~/.ssh/id_rsa'
 
