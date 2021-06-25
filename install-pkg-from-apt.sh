@@ -17,3 +17,6 @@ apt install gnome-tweak-tool
 
 # Doc
 apt install meld
+apt install hplip
+apt install jpegoptim
+apt install imagemagick
