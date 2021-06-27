@@ -1,21 +1,21 @@
 #!/bin/bash
 
 if [ -z ${MYHOME} ]; then
-    export MYHOME=$HOME
+  export MYHOME=$HOME
 else
-    export MYHOME=$MYHOME
+  export MYHOME=$MYHOME
 fi
 echo "Copying bashrcs to ${MYHOME}"
 if grep "bashrc-extra" ~/.bashrc
 then
-    echo "bashrc no need update"
+  echo "bashrc no need update"
 else
-    echo "# My bashrc" >> ${MYHOME}/.bashrc
-    echo "source ${MYHOME}/.bashrc-extra" >> ${MYHOME}/.bashrc
+  echo "# My bashrc" >> ${MYHOME}/.bashrc
+  echo "export MYHOME=$MYHOME" > ${MYHOME}/.bashrc
+  echo "source ${MYHOME}/.bashrc-extra" >> ${MYHOME}/.bashrc
 fi
 
-echo "export MYHOME=$MYHOME" > ${MYHOME}/.bashrc-extra
-cat ./bashrc/bashrc-extra >> ${MYHOME}/.bashrc-extra
+cp ./bashrc/bashrc-extra  ${MYHOME}/.bashrc-extra
 cp ./bashrc/bashrc-aliases ${MYHOME}/.bashrc-aliases
 cp ./bashrc/bashrc-additional ${MYHOME}/.bashrc-additional
 cp ./bashrc/bashrc-additional-work ${MYHOME}/.bashrc-additional-work
