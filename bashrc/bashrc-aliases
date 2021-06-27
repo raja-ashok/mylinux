@@ -1,12 +1,12 @@
 # Additional exports and functions
-source ~/.bashrc-additional
+source ${MYHOME}/.bashrc-additional
 
 # 1. General aliases
-alias bashrc='. ~/.bashrc'
-alias bashrc-extra='vi ~/.bashrc-extra'
-alias bashrc-aliases='vi ~/.bashrc-aliases'
-alias bashrc-additional='vi ~/.bashrc-additional'
-alias bashrc-additional-work='vi ~/.bashrc-additional-work'
+alias bashrc='. ${MYHOME}/.bashrc'
+alias bashrc-extra='vi ${MYHOME}/.bashrc-extra'
+alias bashrc-aliases='vi ${MYHOME}/.bashrc-aliases'
+alias bashrc-additional='vi ${MYHOME}/.bashrc-additional'
+alias bashrc-additional-work='vi ${MYHOME}/.bashrc-additional-work'
 
 alias ll='ls -l'
 alias llrt='ls -lrt'
@@ -63,7 +63,7 @@ gp() {
   git push origin ${CUR_BRANCH}
 }
 
-alias gssh='ssh-add ~/.ssh/id_rsa'
+alias gssh='ssh-add ${MYHOME}/.ssh/id_rsa'
 
 # Additional exports, functions and aliases
-source ~/.bashrc-additional-work
+source ${MYHOME}/.bashrc-additional-work

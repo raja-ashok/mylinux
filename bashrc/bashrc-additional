@@ -1,6 +1,6 @@
 # Additional exports and functions
 
-export REPODIR="$HOME/repo"
+export REPODIR="$MYHOME/repo"
 
 alias repodir='echo $REPODIR'
 

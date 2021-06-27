@@ -18,4 +18,4 @@ eval $(ssh-agent -s)
 export TZ='Asia/Kolkata'
 
 # Add aliases
-source ~/.bashrc-aliases
+source ${MYHOME}/.bashrc-aliases
