@@ -6,11 +6,12 @@ else
     export MYHOME=$MYHOME
 fi
 echo "Copying bashrcs to ${MYHOME}"
-if grep "source ~/.bashrc-extra" ~/.bashrc
+if grep "bashrc-extra" ~/.bashrc
 then
     echo "bashrc no need update"
 else
-    cat ./bashrc/bashrc >> ${MYHOME}/.bashrc
+    echo "# My bashrc" >> ${MYHOME}/.bashrc
+    echo "source ${MYHOME}/.bashrc-extra" >> ${MYHOME}/.bashrc
 fi
 
 echo "export MYHOME=$MYHOME" > ${MYHOME}/.bashrc-extra
