@@ -34,7 +34,6 @@ alias ldpathupdate='export LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH'
 
 ## 3.2 git
 alias g='git'
-alias grupdate='git remote update'
 gl() {
   GLARGS=""
   if [ $# -gt 0 ]; then
@@ -42,25 +41,39 @@ gl() {
   fi
   git log $GLARGS
 }
+alias gcl='git clone'
 alias gc='git checkout'
+alias gru='git remote update'
 parse_git_branch2() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
 }
 gr() {
   CUR_BRANCH=$(parse_git_branch2)
+  BRANCH=origin/${CUR_BRANCH}
+  if [ $# -gt 0 ]; then
+    BRANCH=$1
+    if [[ "$BRANCH" != *"/"* ]]; then
+       BRANCH=origin/$BRANCH
+    fi
+  fi
   git remote update
-  echo "Rebasing to origin/${CUR_BRANCH}..."
-  git rebase origin/${CUR_BRANCH}
+  echo "Rebasing to ${BRANCH}..."
+  git rebase ${BRANCH}
 }
 alias gs='git status'
 alias ga='git add'
 alias gd='git diff'
-alias gc='git commit -m'
-alias gca='git commit --amend'
+alias gcm='git commit -m'
+alias gcma='git commit --amend'
 gp() {
   CUR_BRANCH=$(parse_git_branch2)
   echo "Pushing origin ${CUR_BRANCH}..."
   git push origin ${CUR_BRANCH}
+}
+gp+() {
+  CUR_BRANCH=$(parse_git_branch2)
+  echo "Pushing origin +${CUR_BRANCH}..."
+  git push origin +${CUR_BRANCH}
 }
 
 alias gssh='ssh-add ${MYHOME}/.ssh/id_rsa'
