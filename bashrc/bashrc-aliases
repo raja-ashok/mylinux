@@ -70,7 +70,7 @@ gp() {
   echo "Pushing origin ${CUR_BRANCH}..."
   git push origin ${CUR_BRANCH}
 }
-gp+() {
+gpf() {
   CUR_BRANCH=$(parse_git_branch2)
   echo "Pushing origin +${CUR_BRANCH}..."
   git push origin +${CUR_BRANCH}
