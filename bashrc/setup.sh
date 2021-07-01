@@ -11,7 +11,7 @@ then
   echo "bashrc no need update"
 else
   echo "# My bashrc" >> ${MYHOME}/.bashrc
-  echo "export MYHOME=$MYHOME" > ${MYHOME}/.bashrc
+  echo "export MYHOME=$MYHOME" >> ${MYHOME}/.bashrc
   echo "source ${MYHOME}/.bashrc-extra" >> ${MYHOME}/.bashrc
 fi
 
