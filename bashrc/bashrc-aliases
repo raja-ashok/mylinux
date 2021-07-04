@@ -8,6 +8,20 @@ alias bashrc-aliases='vi ${MYHOME}/.bashrc-aliases'
 alias bashrc-additional='vi ${MYHOME}/.bashrc-additional'
 alias bashrc-additional-work='vi ${MYHOME}/.bashrc-additional-work'
 
+gbashrc() {
+  cp ${MYHOME}/repo/my/mylinux/bashrc/bashrc-extra ${MYHOME}/.bashrc-extra
+  cp ${MYHOME}/repo/my/mylinux/bashrc/bashrc-aliases ${MYHOME}/.bashrc-aliases
+  cp ${MYHOME}/repo/my/mylinux/bashrc/bashrc-additional ${MYHOME}/.bashrc-additional
+  cp ${MYHOME}/repo/my/WorkData/bashrc/bashrc-additional-work ${MYHOME}/.bashrc-additional-work
+}
+
+ubashrc() {
+  cp ${MYHOME}/.bashrc-extra ${MYHOME}/repo/my/mylinux/bashrc/bashrc-extra
+  cp ${MYHOME}/.bashrc-aliases ${MYHOME}/repo/my/mylinux/bashrc/bashrc-aliases
+  cp ${MYHOME}/.bashrc-additional ${MYHOME}/repo/my/mylinux/bashrc/bashrc-additional
+  cp ${MYHOME}/.bashrc-additional-work ${MYHOME}/repo/my/WorkData/bashrc/bashrc-additional-work
+}
+
 alias ll='ls -l'
 alias llrt='ls -lrt'
 alias llrta='ls -lrta'

@@ -23,7 +23,7 @@ vimide() {
   cd $REPODIR/my/VimIDE
 }
 
-# ifl, iflfortls, twt
+# ifl, iflfortls, twt, ossl
 
 ifl() {
   cd $REPODIR/code/IFL
@@ -35,4 +35,8 @@ iflfortls() {
 
 twt() {
   cd $REPODIR/code/TalkWithTLS
+}
+
+ossl() {
+  cd $REPODIR/code/openssl
 }
