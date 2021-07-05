@@ -43,8 +43,24 @@ alias k3schmod='sudo chmod 755 /var/lib/rancher/k3s/server &&
 
 # 3. Work
 ## 3.1 Path update
+alias path='echo $PATH'
+pathu() {
+  NEW_DIR="."
+  if [ $# -gt 0 ]; then
+    NEW_DIR=$1
+  fi
+  echo "export PATH=$NEW_DIR:$PATH"
+  export PATH=$NEW_DIR:$PATH
+}
 alias ldpath='echo $LD_LIBRARY_PATH'
-alias ldpathupdate='export LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH'
+ldpathu() {
+  NEW_DIR="."
+  if [ $# -gt 0 ]; then
+    NEW_DIR=$1
+  fi
+  echo "export LD_LIBRARY_PATH=$NEW_DIR:$LD_LIBRARY_PATH"
+  export LD_LIBRARY_PATH=$NEW_DIR:$LD_LIBRARY_PATH
+}
 
 ## 3.2 git
 alias g='git'
