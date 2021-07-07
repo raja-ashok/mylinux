@@ -20,6 +20,7 @@ apt install meld -y
 apt install hplip -y
 apt install jpegoptim -y
 apt install imagemagick -y
+apt install notepadqq -y
 
 # Utils
 apt install tree -y
