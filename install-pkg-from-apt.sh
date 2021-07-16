@@ -21,6 +21,8 @@ apt install hplip -y
 apt install jpegoptim -y
 apt install imagemagick -y
 apt install notepadqq -y
+# pdf
+apt install gscan2pdf -y
 
 # Utils
 apt install tree -y
