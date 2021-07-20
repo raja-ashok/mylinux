@@ -73,6 +73,7 @@ gl() {
 }
 alias gcl='git clone'
 alias gc='git checkout'
+alias gb='git branch'
 alias gru='git remote update'
 parse_git_branch2() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
