@@ -21,6 +21,9 @@ apt install hplip -y
 apt install jpegoptim -y
 apt install imagemagick -y
 apt install notepadqq -y
+# gedit is the text editor in gnome
+apt install gedit gedit-plugins -y
+
 # pdf
 apt install gscan2pdf -y
 
