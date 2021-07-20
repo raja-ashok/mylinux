@@ -22,6 +22,8 @@ ubashrc() {
   cp ${MYHOME}/.bashrc-additional-work ${MYHOME}/repo/my/WorkData/bashrc/bashrc-additional-work
 }
 
+# fbashrc is added below
+
 alias ll='ls -l'
 alias llrt='ls -lrt'
 alias llrta='ls -lrta'
@@ -108,6 +110,14 @@ gpf() {
 }
 
 alias gssh='ssh-add ${MYHOME}/.ssh/id_rsa'
+
+# fetch mylinux and WorkData repo
+fbashrc() {
+  cd $REPODIR/my/mylinux
+  gr
+  cd $REPODIR/my/WorkData
+  gr
+}
 
 # Additional exports, functions and aliases
 source ${MYHOME}/.bashrc-additional-work
