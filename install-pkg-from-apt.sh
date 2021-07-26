@@ -3,6 +3,7 @@
 apt install make gcc g++ -y
 apt install net-tools -y
 apt install cloc -y
+apt install moreutils
 
 # Install python2.7
 apt install python -y
