@@ -25,6 +25,7 @@ ubashrc() {
 # fbashrc is added below
 
 alias ll='ls -l'
+alias lla='ls -la'
 alias llrt='ls -lrt'
 alias llrta='ls -lrta'
 
