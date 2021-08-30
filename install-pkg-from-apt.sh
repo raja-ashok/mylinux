@@ -14,7 +14,11 @@ python get-pip.py
 apt install python3 python3-pip -y
 
 # Tools
+apt install tilix -y
 apt install gnome-tweak-tool -y
+apt install gnome-shell-extensions -y
+apt install chrome-gnome-shell -y
+apt install sshpass -y
 
 # Doc
 apt install meld -y
