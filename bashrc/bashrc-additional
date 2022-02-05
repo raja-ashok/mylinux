@@ -48,3 +48,13 @@ ravk() {
 ckt() {
   cd $REPODIR/my/ravk/clickfortech
 }
+
+# ravk
+
+cft() {
+  cd $REPODIR/my/ravk/clickfortech
+}
+
+cftg() {
+  cd $REPODIR/my/ravk/clickfortech.github.io
+}
