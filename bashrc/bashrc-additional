@@ -58,3 +58,10 @@ cft() {
 cftg() {
   cd $REPODIR/my/ravk/clickfortech.github.io
 }
+
+# Shortcut
+
+# Run the CMDTORUN repeatedly with sleep for 2 sec, break if CMDTORUN failed
+runcmdinloop() {
+  while true; do $CMDTORUN ; if [ $? -ne 0 ]; then echo "FAILED"; break; fi; sleep 2; done
+}
