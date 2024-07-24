@@ -70,7 +70,7 @@ alias g='git'
 gl() {
   GLARGS=""
   if [ $# -gt 0 ]; then
-    GLARGS="-n $1"
+    GLARGS="-n $@"
   fi
   git log $GLARGS
 }
