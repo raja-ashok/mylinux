@@ -33,6 +33,11 @@ alias c='clear'
 
 alias s='sudo systemctl'
 
+etchost() {
+    echo "sudo -E vi /etc/hosts"
+    sudo -E vi /etc/hosts
+}
+
 # 2. Kubernetes related aliases
 alias k='kubectl'
 
