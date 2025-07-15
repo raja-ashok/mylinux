@@ -13,13 +13,20 @@ fi
 
 sudo apt update
 
+u24pkgs() {
+    # Startup Disk Creator app
+    sudo apt install usb-creator-gtk
+}
+
 # Tools
 sudo apt install tilix -y
 # Install gnome tweak
 if [ -z $major_ver ]; then
     echo "Major release version parsing failed"
 else
-    if [ $(($major_ver)) -ge 22 ]; then
+    if [ $(($major_ver)) -ge 24 ]; then
+        u24pkgs
+    elif [ $(($major_ver)) -ge 22 ]; then
         sudo apt install gnome-tweaks -y
     else
         sudo apt install gnome-tweak-tool -y
