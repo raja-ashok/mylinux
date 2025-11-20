@@ -82,9 +82,12 @@ gl() {
 alias gcl='git clone'
 alias gc='git checkout'
 alias gb='git branch'
-alias gru='git remote update'
 parse_git_branch2() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/'
+}
+gru() {
+  echo "$ git remote update"
+  git remote update
 }
 gr() {
   CUR_BRANCH=$(parse_git_branch2)
@@ -95,9 +98,26 @@ gr() {
        BRANCH=origin/$BRANCH
     fi
   fi
+  echo "$ git remote update"
   git remote update
-  echo "Rebasing to ${BRANCH}..."
+  echo "$ git rebase ${BRANCH}"
   git rebase ${BRANCH}
+}
+# git refetch current branch
+gfcb() {
+  TMP_BRANCH_NAME="tmp_b"
+  CUR_BRANCH=$(parse_git_branch2)
+  echo "$ git checkout -b $TMP_BRANCH_NAME"
+  git checkout -b $TMP_BRANCH_NAME
+  echo "$ git checkout -b $TMP_BRANCH_NAME"
+  git checkout -b $TMP_BRANCH_NAME
+  echo "$ git branch -D $CUR_BRANCH"
+  git branch -D $CUR_BRANCH
+  gru
+  echo "$ git checkout -b $CUR_BRANCH origin/$CUR_BRANCH"
+  git checkout -b $CUR_BRANCH origin/$CUR_BRANCH
+  echo "$ git branch -D $TMP_BRANCH_NAME"
+  git branch -D $TMP_BRANCH_NAME
 }
 alias gs='git status'
 alias ga='git add'
