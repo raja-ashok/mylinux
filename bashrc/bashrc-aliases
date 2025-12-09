@@ -107,6 +107,8 @@ gr() {
 gfcb() {
   TMP_BRANCH_NAME="tmp_b"
   CUR_BRANCH=$(parse_git_branch2)
+  echo "$ git checkout ."
+  git checkout .
   echo "$ git checkout -b $TMP_BRANCH_NAME"
   git checkout -b $TMP_BRANCH_NAME
   echo "$ git checkout -b $TMP_BRANCH_NAME"
